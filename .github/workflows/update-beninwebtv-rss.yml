@@ -26,11 +26,19 @@ jobs:
       - name: Enrich RSS metadata
         run: python beninwebtv-radar/enrich_rss.py
 
-      - name: Commit updated feed
+      - name: Split RSS feeds
+        run: python beninwebtv-radar/split_feeds.py
+
+      - name: Commit updated feeds
         run: |
           git config user.name "beninwebtv-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add beninwebtv-radar/rss.xml
+          git add beninwebtv-radar/rss.xml \
+                  beninwebtv-radar/benin.xml \
+                  beninwebtv-radar/international.xml \
+                  beninwebtv-radar/people.xml \
+                  beninwebtv-radar/faits-divers.xml \
+                  beninwebtv-radar/sport.xml
           git diff --cached --quiet && exit 0
-          git commit -m "Update BeninWebTV RSS feed"
+          git commit -m "Update BeninWebTV RSS feeds"
           git push
