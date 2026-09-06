@@ -23,6 +23,9 @@ jobs:
       - name: Generate RSS
         run: python beninwebtv-radar/generate_rss.py
 
+      - name: Add curated sources and extra trends
+        run: python beninwebtv-radar/augment_sources.py
+
       - name: Enrich RSS metadata
         run: python beninwebtv-radar/enrich_rss.py
 
