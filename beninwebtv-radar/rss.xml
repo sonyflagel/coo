@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BeninWebTV — Radar éditorial</title>
+    <link>https://beninwebtv.bj/</link>
+    <description>Radar automatique Google Trends + Google News/RSS : Bénin, Afrique, international, people, faits divers, sport, politique, économie et technologie.</description>
+    <language>fr</language>
+    <generator>BeninWebTV Radar</generator>
+    <atom:link href="https://raw.githubusercontent.com/sonyflagel/coo/main/beninwebtv-radar/rss.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
