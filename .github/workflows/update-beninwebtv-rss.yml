@@ -23,6 +23,9 @@ jobs:
       - name: Generate RSS
         run: python beninwebtv-radar/generate_rss.py
 
+      - name: Enrich RSS metadata
+        run: python beninwebtv-radar/enrich_rss.py
+
       - name: Commit updated feed
         run: |
           git config user.name "beninwebtv-radar-bot"
